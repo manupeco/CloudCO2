@@ -2,6 +2,11 @@
 
 This project includes tools and solutions to reduce your cloud projects' carbon footprint (and of course, costs).
 
+# Requirements
+
+* gcp.json credential file in the project root (be sure to have this in .gitignore)
+* Enable Identity and Access Management (IAM) API
+
 ## Tools
 
 ### Cloud SQL Optimizer
