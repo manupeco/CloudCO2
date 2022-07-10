@@ -6,3 +6,4 @@ workspace.code-workspace
 .terraform.lock*
 
 bck_local.tf
+*.tfstate
