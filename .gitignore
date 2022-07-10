@@ -1,3 +1,8 @@
 gcp.json
 gcp-scheduler-task/*
 workspace.code-workspace
+
+*/.terraform/*
+.terraform.lock*
+
+bck_local.tf
