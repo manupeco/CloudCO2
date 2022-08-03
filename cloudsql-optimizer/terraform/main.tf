@@ -8,11 +8,11 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("../gcp.json")
+  credentials = var.credentials
 
-  project = ""
-  region  = ""
-  zone    = ""
+  project = var.project_id
+  region  = var.region
+  zone    = var.zone
 }
 
 data "google_compute_default_service_account" "default" {
