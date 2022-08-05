@@ -11,5 +11,9 @@ variable "zone" {
 }
 
 variable "credentials" {
-    default = file("../../gcp.json")
+    default = "../../gcp.json"
+}
+
+variable "db_instance_name" {
+    default = "test1"
 }

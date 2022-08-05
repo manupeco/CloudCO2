@@ -7,3 +7,4 @@ workspace.code-workspace
 
 bck_local.tf
 *.tfstate
+cloudsql-optimizer/terraform/variables.tf

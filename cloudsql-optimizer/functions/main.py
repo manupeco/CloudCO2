@@ -6,9 +6,12 @@ from flask import escape
 import functions_framework
 import os
 import urllib.request
+import json
 
 credentials = GoogleCredentials.get_application_default()
 service = discovery.build('sqladmin', 'v1beta4', credentials=credentials, cache_discovery=False)
+
+logging.basicConfig(level=logging.DEBUG)
 
 @functions_framework.http
 def manage_db(request):
@@ -21,16 +24,20 @@ def manage_db(request):
         Response object using `make_response`
         <https://flask.palletsprojects.com/en/1.1.x/api/#flask.make_response>.
     """
-    request_json = request.get_json(silent=True)
-    request_args = request.args
+    request = request.get_data()
+    try: 
+        request_json = json.loads(request.decode())
+    except ValueError as e:
+        logging.info(f"Error decoding JSON: {e}")
+        return "JSON Error", 400
+
+    logging.info(f"request_json: {request_json}")
 
     if request_json and 'action' in request_json:
         action = request_json['action']
         db_instance_name = request_json['db_instance_name']
-    elif request_args and 'action' in request_args:
-        action = request_args['action']
-        db_instance_name = request_args['db_instance_name']
     else:
+        logging.info("Nothing to do")
         return 'Nothing to do'
     
     project = get_project_id()
