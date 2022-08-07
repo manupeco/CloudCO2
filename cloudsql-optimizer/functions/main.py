@@ -69,9 +69,6 @@ def stop(project, instance_name):
   patch(project, instance_name, "NEVER")
 
 def patch(project, instance, activation_policy):
-  request = service.instances().get(project=project, instance=instance)
-  response = request.execute()
-
   dbinstancebody = {
     "settings": {
       "settingsVersion": response["settings"]["settingsVersion"],
