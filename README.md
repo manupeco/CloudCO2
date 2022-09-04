@@ -29,10 +29,13 @@ Go to `cloudsql-optimizer/terraform`. Rename the file `variables_template.tf` to
 Go to `cloudsql-optimizer/terraform` and run
 
 `terraform init`
+
+followed by 
+
 `terraform apply`
 
 #### Clean up
 
 From the same folder run the command
 
-`terraform delete`
+`terraform destroy`
