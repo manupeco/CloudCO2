@@ -39,3 +39,9 @@ followed by
 From the same folder run the command
 
 `terraform destroy`
+
+### GKE-Optimizer
+
+#### Configuration
+
+Be sure to have enabled Kubernetes Engine API on your Google Cloud console.

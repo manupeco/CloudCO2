@@ -2,9 +2,14 @@ gcp.json
 gcp-scheduler-task/*
 workspace.code-workspace
 
+.terraform
 */.terraform/*
 .terraform.lock*
 
 bck_local.tf
 *.tfstate
+*.tfstate.backup
 */terraform/variables.tf
+
+*/.DS_Store
+node_modules
