@@ -42,6 +42,20 @@ From the same folder run the command
 
 ### GKE-Optimizer
 
-#### Configuration
+#### Deployment
 
-Be sure to have enabled Kubernetes Engine API on your Google Cloud console.
+Go to `gke-optimizer/terraform` and run
+
+`terraform init`
+
+followed by 
+
+`terraform apply`
+
+#### Clean up
+
+From the same folder run the command
+
+`terraform destroy`
+
+
