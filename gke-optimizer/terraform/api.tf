@@ -1,6 +1,5 @@
 data "google_client_config" "default" {}
 
-/* ensure that the image registry bucket is created by pushing an empty image to it */
 resource "null_resource" "docker-registry" {
   
   provisioner "local-exec" { 
