@@ -20,7 +20,7 @@ resource "google_container_node_pool" "primary_nodes" {
   cluster    = google_container_cluster.primary.name
   
   autoscaling {
-    min_node_count = 0
+    min_node_count = 1
     max_node_count = 5
   }
 
