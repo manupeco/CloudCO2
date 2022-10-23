@@ -38,6 +38,8 @@ resource "kubernetes_namespace" "kn" {
 
 
 resource "kubernetes_deployment" "api_skaffold" {
+  depends_on = [null_resource.docker-registry]
+  
   metadata {
     name      = "api-skaffold"
     namespace = kubernetes_namespace.kn.metadata.0.name
