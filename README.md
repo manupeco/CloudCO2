@@ -42,6 +42,10 @@ From the same folder run the command
 
 ### GKE-Optimizer
 
+#### Prepare the app
+
+go to `gke-optimizer` and run `npm install`to add the needed node libraries to the project
+
 #### Deployment
 
 Go to `gke-optimizer/terraform` and run
